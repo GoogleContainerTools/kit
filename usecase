@@ -1,0 +1,25 @@
+Usecase 1
+
+1. Create Persistent Store Volume over Google disk - SSD, HD.
+2. Create automated Kubernetes cluster install with following stateful apps using dynamic persisted volume claims.
+
+Persistent store
+Mysql
+Postgres
+Wordpress
+Kafka
+Elastic Search
+Nginx
+
+3. Setup Stackdriver and Prometheus for monitoring traffic to and from these apps.
+4. Check apps are working fine with ready and live state monitors.
+5. Add scale factor 2+ and confirm associated PODs.
+6. Test autoscaling as incoming load increases.
+6. Add sidecars to these apps to load data in each of the apps.
+7. Kube-inject Istio side-car container along the app container and test retries, failover, canary host, a/b test, rate limiting, secure communication, routing rules.
+8. Add large number of objects and check the state of secure etcd cluster.
+
+Usecase 2
+
+Install app from Google Market place and follow some of the tests above. 
+
